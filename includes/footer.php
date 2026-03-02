@@ -11,6 +11,9 @@
                     <?php echo tr('footer_text'); ?> &copy;
                     <?php echo date('Y'); ?>
                 </p>
+                <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">
+                    Geliştirici: Ali Kök
+                </p>
             </div>
 
             <div class="footer-col links-col">
@@ -24,7 +27,8 @@
                 <a href="#story">
                     <?php echo tr('story_of_denim'); ?>
                 </a>
-                <a href="#">
+                <a href="#contact"
+                    onclick="document.querySelector('input[name=subject]').value='İş Başvurusu / Career Application';">
                     <?php echo tr('career'); ?>
                 </a>
             </div>

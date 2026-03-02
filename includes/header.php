@@ -128,7 +128,9 @@ require_once 'includes/functions.php';
             <a href="#story" class="nav-link">
                 <?php echo tr('story_of_denim'); ?>
             </a>
-            <a href="<?php echo htmlspecialchars($site_config['linkedin_url']); ?>" target="_blank" class="nav-link">
+            <a href="#contact"
+                onclick="document.querySelector('.menu-close').click(); document.querySelector('input[name=subject]').value='İş Başvurusu / Career Application';"
+                class="nav-link">
                 <?php echo tr('career'); ?>
             </a>
             <a href="#contact" class="nav-link">
