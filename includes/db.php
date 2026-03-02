@@ -17,6 +17,15 @@ if (getenv('MYSQLHOST')) {
     $db = getenv('MYSQLDATABASE');
     $user = getenv('MYSQLUSER');
     $pass = getenv('MYSQLPASSWORD');
+} elseif (getenv('MYSQL_URL')) {
+    $url = parse_url(getenv('MYSQL_URL'));
+    $host = $url["host"] ?? '';
+    $user = $url["user"] ?? '';
+    $pass = $url["pass"] ?? '';
+    $db = isset($url["path"]) ? ltrim($url["path"], '/') : '';
+    if (isset($url["port"])) {
+        $host .= ";port=" . $url["port"];
+    }
 } elseif (getenv('DATABASE_URL')) {
     $url = parse_url(getenv('DATABASE_URL'));
     $host = $url["host"] ?? '';
