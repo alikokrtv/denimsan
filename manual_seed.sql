@@ -22,5 +22,6 @@ UPDATE site_settings SET
     about_title_en = 'About Us', 
     about_text_tr = 'Denimsan olarak, 20 yılı aşkın köklü tekstil mirasımızı modern üretim teknolojileriyle harmanlıyoruz. Premium denim kumaş üretiminde, estetik ve dayanıklılığı bir araya getirerek global moda dünyasına yenilikçi dokunuşlar sunmaktan gurur duyuyoruz. Sadece bir kumaş üreticisi değil, kaliteden ödün vermeyen markaların güvenilir çözüm ortağıyız.', 
     about_text_en = 'At Denimsan, we blend over 20 years of deep-rooted textile heritage with modern production technologies. We take pride in offering innovative touches to the global fashion world by combining aesthetics and durability in premium denim fabric manufacturing. More than just a fabric producer, we are the trusted solution partner for brands that refuse to compromise on quality.',
-    contact_phone = '+90 530 774 26 06' 
+    contact_phone = '+90 530 774 26 06',
+    contact_address = 'Mehmet Nesih Özmen, Kasım Sok. Özmen Mah. Kasım Sok No:5/E, 34173 Güngören/İstanbul, Türkiye'
 WHERE id = 1;
