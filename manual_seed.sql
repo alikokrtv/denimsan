@@ -15,3 +15,12 @@ INSERT INTO collection_categories (title_tr, title_en, description_tr, descripti
 
 -- Make sure the Hero Video matches the TemperTekstil requirement from the PDF
 UPDATE site_settings SET hero_video_url = 'https://www.tempertekstil.com.tr/assets/video/intro.mp4' WHERE id = 1;
+
+-- Set final corporate text for About Us and Contact
+UPDATE site_settings SET 
+    about_title_tr = 'Hakkımızda', 
+    about_title_en = 'About Us', 
+    about_text_tr = 'Denimsan; sahip olduğu bilgi, tecrübe ve birikimlerini siz değerli müşterileri ile paylaşmanın heyecanını ve mutluluğunu duyar. Sektörde 20 yıllık tecrübesi ile sektöre ve siz değerli müşterilerine çözüm ortağı olarak hizmet vermeyi kendine birinci vazife ve hedef seçmiştir.', 
+    about_text_en = 'Denimsan is excited and happy to share its knowledge, experience, and background with our valued customers. With 20 years of experience in the sector, we have set it as our primary duty and goal to serve as a solution partner to the industry and our esteemed clients.',
+    contact_phone = '+90 530 774 26 06' 
+WHERE id = 1;
