@@ -20,7 +20,7 @@ UPDATE site_settings SET hero_video_url = 'https://www.tempertekstil.com.tr/asse
 UPDATE site_settings SET 
     about_title_tr = 'Hakkımızda', 
     about_title_en = 'About Us', 
-    about_text_tr = 'Denimsan; sahip olduğu bilgi, tecrübe ve birikimlerini siz değerli müşterileri ile paylaşmanın heyecanını ve mutluluğunu duyar. Sektörde 20 yıllık tecrübesi ile sektöre ve siz değerli müşterilerine çözüm ortağı olarak hizmet vermeyi kendine birinci vazife ve hedef seçmiştir.', 
-    about_text_en = 'Denimsan is excited and happy to share its knowledge, experience, and background with our valued customers. With 20 years of experience in the sector, we have set it as our primary duty and goal to serve as a solution partner to the industry and our esteemed clients.',
+    about_text_tr = 'Denimsan olarak, 20 yılı aşkın köklü tekstil mirasımızı modern üretim teknolojileriyle harmanlıyoruz. Premium denim kumaş üretiminde, estetik ve dayanıklılığı bir araya getirerek global moda dünyasına yenilikçi dokunuşlar sunmaktan gurur duyuyoruz. Sadece bir kumaş üreticisi değil, kaliteden ödün vermeyen markaların güvenilir çözüm ortağıyız.', 
+    about_text_en = 'At Denimsan, we blend over 20 years of deep-rooted textile heritage with modern production technologies. We take pride in offering innovative touches to the global fashion world by combining aesthetics and durability in premium denim fabric manufacturing. More than just a fabric producer, we are the trusted solution partner for brands that refuse to compromise on quality.',
     contact_phone = '+90 530 774 26 06' 
 WHERE id = 1;

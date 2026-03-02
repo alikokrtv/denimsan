@@ -62,9 +62,9 @@ $dictionary = [
         'announcements' => 'Duyurular',
         'contact_menu' => 'İletişim',
         'vision_mission' => 'Vizyon & Misyon',
-        'vision_text' => 'Sektörde 20 yıllık tecrübesi ile sektöre ve siz değerli müşterilerine çözüm ortağı olarak hizmet vermeyi kendine birinci vazife ve hedef seçmiştir. Denimsan web sayfası yakında burada hizmetinizde olacak.',
+        'vision_text' => 'Sürdürülebilir üretim anlayışımız ve mükemmelliyetçi yaklaşımımızla, denim sektörüne yön veren global bir aktör olmak. Geleneksel işçiliğin ruhunu, geleceğin yenilikçi trendleriyle buluşturarak her iplikte kaliteyi dokuyoruz.',
         'production_title' => 'Nasıl Üretiyoruz?',
-        'production_text' => 'Premium denim kumaşlarımız, sürdürülebilir üretim teknikleri ve yenilikçi dokuma makineleri kullanılarak, kalite standartlarından ödün vermeden özenle üretilmektedir.'
+        'production_text' => 'Üretim bantlarımızda yer alan en son teknoloji dokuma tezgahlarımız ve çevre dostu renklendirme ünitelerimiz ile hem doğaya saygılı hem de sınırları zorlayan yüksek performanslı kumaşlar üretiyoruz.'
     ],
     'en' => [
         'home' => 'Home',
@@ -94,9 +94,9 @@ $dictionary = [
         'announcements' => 'Announcements',
         'contact_menu' => 'Contact',
         'vision_mission' => 'Vision & Mission',
-        'vision_text' => 'With 20 years of experience in the sector, we have set it as our primary duty and goal to serve as a solution partner to the sector and our valued customers. Denimsan web page will be at your service here soon.',
+        'vision_text' => 'To be a global actor shaping the denim industry with our sustainable production philosophy and perfectionist approach. We weave quality into every thread by bridging the spirit of traditional craftsmanship with the innovative trends of the future.',
         'production_title' => 'How We Produce?',
-        'production_text' => 'Our premium denim fabrics are carefully produced using sustainable production techniques and innovative weaving machines without compromising quality standards.'
+        'production_text' => 'With the latest weaving looms and eco-friendly dyeing units on our production lines, we manufacture high-performance fabrics that respect nature while pushing boundaries.'
     ]
 ];
 
