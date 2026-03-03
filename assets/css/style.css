@@ -538,10 +538,9 @@ p {
     color: white;
     cursor: default;
     flex-shrink: 0;
-    background: #000;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
-    height: 100%;
 }
 
 .category-card:hover {
@@ -569,19 +568,20 @@ p {
 
 .category-info {
     padding: 16px;
-    background: #000;
+    background: #000000;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    min-height: 90px;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    min-height: 100px;
 }
 
 .category-title {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    margin: 0 0 8px;
+    letter-spacing: 2px;
+    margin: 0 0 10px;
     color: #ffffff;
     white-space: nowrap;
     overflow: hidden;
@@ -590,16 +590,16 @@ p {
 }
 
 .category-desc-text {
-    font-size: 0.72rem;
-    color: #aaaaaa;
-    line-height: 1.5;
+    font-size: 0.78rem;
+    color: #cccccc;
+    line-height: 1.6;
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Keep old classes harmless in case still referenced */
@@ -882,7 +882,8 @@ p {
 
 @media (max-width: 480px) {
     .category-card {
-        height: 300px;
+        width: 44vw;
+        height: auto;
     }
 
     .categories-grid {

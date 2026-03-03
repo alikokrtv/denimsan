@@ -155,8 +155,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
             style="margin-top: 40px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
             <p style="color: #ccc; line-height: 1.8; font-size: 1rem; font-weight: 300;">
                 <?php echo $current_lang === 'tr'
-                    ? 'Denim, 19. yüzyılda dayanıklı çalışma kıyafeti olarak doğdu. Birbirine geçen atkı ve çözgü ipliklerinin oluşturduğu twill dokuma, ham indigo mavisi ve sağlamlığıyla efsane oldu. Bugün Denimsan olarak bu köklü gelenekten ilham alıyor; rigid yapıdan dört yönlü stretch\'e, geri dönüştürülmüş iplikten tensel karışımlara kadar her kumaşı bir zanaat eseri anlayışıyla işliyoruz.'
-                    : 'Denim was born as rugged workwear in the 19th century — a twill weave celebrated for its raw indigo depth and durability. Today at Denimsan, we draw from that heritage: from rigid structures to four-way stretch, from recycled yarns to tencel blends, every fabric is treated as a work of craft.';
+                    ? 'Denimsan\'ın hikayesi, 2014 yılında İstanbul\'da denim tutkusuyla başladı. Bugün, yerli ve küresel markalara stratejik kumaş tedariği sağlayan, modern ve güvenilir bir çözüm ortağıyız. Sahip olduğumuz geniş ürün yelpazesi ve güçlü stok yapımızla; kumaşı sadece bir ticaret nesnesi değil, bir uzmanlık ve kalite taahhüdü olarak görüyoruz.'
+                    : 'The story of Denimsan began in 2014 in Istanbul with a passion for denim. Today, we are a modern and reliable solution partner, providing strategic fabric supply to domestic and global brands. With our extensive product range and strong inventory, we view fabric not just as a commodity, but as a commitment to expertise and quality.';
                 ?>
             </p>
         </div>
