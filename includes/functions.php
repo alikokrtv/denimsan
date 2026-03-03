@@ -64,7 +64,8 @@ $dictionary = [
         'vision_mission' => 'Vizyon & Misyon',
         'vision_text' => 'Sürdürülebilir üretim anlayışımız ve mükemmelliyetçi yaklaşımımızla, denim sektörüne yön veren global bir aktör olmak. Geleneksel işçiliğin ruhunu, geleceğin yenilikçi trendleriyle buluşturarak her iplikte kaliteyi dokuyoruz.',
         'production_title' => 'Nasıl Üretiyoruz?',
-        'production_text' => 'Üretim bantlarımızda yer alan en son teknoloji dokuma tezgahlarımız ve çevre dostu renklendirme ünitelerimiz ile hem doğaya saygılı hem de sınırları zorlayan yüksek performanslı kumaşlar üretiyoruz.'
+        'production_text' => 'Üretim bantlarımızda yer alan en son teknoloji dokuma tezgahlarımız ve çevre dostu renklendirme ünitelerimiz ile hem doğaya saygılı hem de sınırları zorlayan yüksek performanslı kumaşlar üretiyoruz.',
+        'fairs' => 'Fuarlar'
     ],
     'en' => [
         'home' => 'Home',
@@ -96,7 +97,8 @@ $dictionary = [
         'vision_mission' => 'Vision & Mission',
         'vision_text' => 'To be a global actor shaping the denim industry with our sustainable production philosophy and perfectionist approach. We weave quality into every thread by bridging the spirit of traditional craftsmanship with the innovative trends of the future.',
         'production_title' => 'How We Produce?',
-        'production_text' => 'With the latest weaving looms and eco-friendly dyeing units on our production lines, we manufacture high-performance fabrics that respect nature while pushing boundaries.'
+        'production_text' => 'With the latest weaving looms and eco-friendly dyeing units on our production lines, we manufacture high-performance fabrics that respect nature while pushing boundaries.',
+        'fairs' => 'Trade Fairs'
     ]
 ];
 

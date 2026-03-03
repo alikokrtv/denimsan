@@ -105,6 +105,9 @@ require_once 'includes/functions.php';
                         <a href="#contact" class="dropdown-link"><?php echo tr('support_line'); ?></a>
                     </div>
                 </div>
+                <div class="nav-item">
+                    <a href="fairs.php" class="nav-link"><?php echo tr('fairs'); ?></a>
+                </div>
             </nav>
 
             <!-- Mobile Menu Toggle -->

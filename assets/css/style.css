@@ -1,5 +1,5 @@
 :root {
-    --bg-dark: #0e0e0e;
+    --bg-dark: #2C2F6C;
     --text-dark: #f0f0f0;
     --bg-light: #ffffff;
     --text-light: #1a1a1a;
@@ -36,9 +36,9 @@ h4,
 h5,
 h6 {
     font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
+    margin-bottom: 16px;
 }
 
 .text-uppercase {
@@ -51,19 +51,19 @@ h6 {
 }
 
 h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
-}
-
-h2 {
     font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 p {
-    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    font-size: clamp(0.88rem, 1vw, 1rem);
     color: #aaa;
     font-weight: 300;
     max-width: 800px;
-    margin: 0 auto 30px;
+    margin: 0 auto 24px;
 }
 
 /* Utilities */
@@ -520,20 +520,21 @@ p {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
 .category-card {
     position: relative;
-    height: 600px;
+    height: 420px;
     overflow: hidden;
     border-radius: 4px;
     display: block;
     text-decoration: none;
     color: white;
-    cursor: pointer;
+    cursor: default;
+    flex-shrink: 0;
 }
 
 .category-img {
@@ -766,7 +767,29 @@ p {
     }
 
     .category-card {
-        height: 400px;
+        height: 340px;
+        width: 70vw;
+    }
+
+    /* --- Horizontal Swipe Carousel for Collections (like ISKO) --- */
+    .categories-grid {
+        display: flex !important;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 14px;
+        margin-top: 30px;
+        padding-bottom: 16px;
+        scrollbar-width: none;
+    }
+
+    .categories-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .categories-grid .category-card {
+        scroll-snap-align: start;
     }
 
     /* Mobile Top Bar: compact strip with phone + lang switcher */
