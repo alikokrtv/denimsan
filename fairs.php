@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config/db.php';
+require_once 'includes/db.php';
 require_once 'includes/functions.php';
 
 $current_lang = $_GET['lang'] ?? $_SESSION['lang'] ?? 'tr';

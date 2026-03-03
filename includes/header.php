@@ -130,6 +130,9 @@ require_once 'includes/functions.php';
             <a href="#story" class="nav-link">
                 <?php echo tr('story_of_denim'); ?>
             </a>
+            <a href="fairs.php" class="nav-link">
+                <?php echo tr('fairs'); ?>
+            </a>
             <a href="#contact"
                 onclick="document.querySelector('.menu-close').click(); document.querySelector('input[name=subject]').value='İş Başvurusu / Career Application';"
                 class="nav-link">
