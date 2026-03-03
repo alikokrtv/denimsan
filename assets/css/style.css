@@ -248,10 +248,10 @@ p {
 }
 
 .site-header.scrolled {
-    background: rgba(20, 22, 75, 0.97);
+    background: rgba(8, 8, 12, 0.97);
     backdrop-filter: blur(10px);
     mix-blend-mode: normal;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header-inner {
@@ -561,10 +561,12 @@ p {
 
 .category-content {
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    bottom: 20px;
+    left: 16px;
+    right: 16px;
     z-index: 2;
     transition: transform 0.5s ease;
+    overflow: hidden;
 }
 
 .category-card:hover .category-img {
@@ -580,8 +582,12 @@ p {
 }
 
 .category-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .category-desc {
@@ -772,8 +778,8 @@ p {
     }
 
     .category-card {
-        height: 340px;
-        width: 70vw;
+        height: 260px;
+        width: 44vw;
     }
 
     /* --- Horizontal Swipe Carousel for Collections (like ISKO) --- */
@@ -896,7 +902,8 @@ p {
     }
 
     .category-card {
-        width: 78vw;
+        width: 44vw;
+        height: 240px;
     }
 
     .hero-content h1 {
