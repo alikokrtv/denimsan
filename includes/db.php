@@ -1,40 +1,39 @@
 <?php
-// includes/db.php
-// Database Connection file
+// includes/db.php — Multi-environment database connection
 
-$host = 'localhost'; // Change for VPS if necessary
+$host = 'localhost';
 $db = 'denimsan_db';
-$user = 'root';      // Development default, change for production
-$pass = '';          // Development default, change for production
+$user = 'root';
+$pass = '';
 $charset = 'utf8mb4';
 
-// Dynamic host configuration for Railway/VPS production
+// 1. Railway production (environment variables set in Railway dashboard)
 if (getenv('MYSQLHOST')) {
     $host = getenv('MYSQLHOST');
     if (getenv('MYSQLPORT')) {
-        $host .= ";port=" . getenv('MYSQLPORT');
+        $host .= ';port=' . getenv('MYSQLPORT');
     }
-    $db = getenv('MYSQLDATABASE');
-    $user = getenv('MYSQLUSER');
-    $pass = getenv('MYSQLPASSWORD');
-} elseif (getenv('MYSQL_URL')) {
-    $url = parse_url(getenv('MYSQL_URL'));
-    $host = $url["host"] ?? '';
-    $user = $url["user"] ?? '';
-    $pass = $url["pass"] ?? '';
-    $db = isset($url["path"]) ? ltrim($url["path"], '/') : '';
-    if (isset($url["port"])) {
-        $host .= ";port=" . $url["port"];
+    $db = getenv('MYSQLDATABASE') ?: $db;
+    $user = getenv('MYSQLUSER') ?: $user;
+    $pass = getenv('MYSQLPASSWORD') ?: $pass;
+
+} elseif (getenv('MYSQL_URL') || getenv('DATABASE_URL')) {
+    $rawUrl = getenv('MYSQL_URL') ?: getenv('DATABASE_URL');
+    $url = parse_url($rawUrl);
+    $host = $url['host'] ?? $host;
+    $user = $url['user'] ?? $user;
+    $pass = $url['pass'] ?? $pass;
+    $db = isset($url['path']) ? ltrim($url['path'], '/') : $db;
+    if (isset($url['port'])) {
+        $host .= ';port=' . $url['port'];
     }
-} elseif (getenv('DATABASE_URL')) {
-    $url = parse_url(getenv('DATABASE_URL'));
-    $host = $url["host"] ?? '';
-    $user = $url["user"] ?? '';
-    $pass = $url["pass"] ?? '';
-    $db = isset($url["path"]) ? ltrim($url["path"], '/') : '';
-    if (isset($url["port"])) {
-        $host .= ";port=" . $url["port"];
-    }
+
+    // 2. Hostinger production — denimsan.com
+} elseif (isset($_SERVER['SERVER_NAME']) && strpos($_SERVER['SERVER_NAME'], 'denimsan.com') !== false) {
+    $host = 'localhost';
+    $db = 'u177542463_denimsan';
+    $user = 'u177542463_root';
+    $pass = '255223Rtv..';
 }
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -47,7 +46,6 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    // For Production: don't output $e->getMessage() directly to the user.
-    die('Database connection failed: ' . $e->getMessage());
+    die('Database connection failed.');
 }
 ?>

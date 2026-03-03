@@ -93,6 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
                     </div>
                     <div class="category-info">
                         <h3 class="category-title text-uppercase"><?php echo htmlspecialchars($catTitle); ?></h3>
+                        <?php if (!empty($catDesc)): ?>
+                            <p class="category-desc-text"><?php echo htmlspecialchars($catDesc); ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -150,8 +153,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
         <!-- Extra Text Below the Video/Cinematic Image -->
         <div class="story-text-content fade-up"
             style="margin-top: 40px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-            <p style="color: #ccc; line-height: 1.8; font-size: 1.1rem; font-weight: 300;">
-                <?php echo htmlspecialchars($site_config['about_text']); ?>
+            <p style="color: #ccc; line-height: 1.8; font-size: 1rem; font-weight: 300;">
+                <?php echo $current_lang === 'tr'
+                    ? 'Denim, 19. yüzyılda dayanıklı çalışma kıyafeti olarak doğdu. Birbirine geçen atkı ve çözgü ipliklerinin oluşturduğu twill dokuma, ham indigo mavisi ve sağlamlığıyla efsane oldu. Bugün Denimsan olarak bu köklü gelenekten ilham alıyor; rigid yapıdan dört yönlü stretch\'e, geri dönüştürülmüş iplikten tensel karışımlara kadar her kumaşı bir zanaat eseri anlayışıyla işliyoruz.'
+                    : 'Denim was born as rugged workwear in the 19th century — a twill weave celebrated for its raw indigo depth and durability. Today at Denimsan, we draw from that heritage: from rigid structures to four-way stretch, from recycled yarns to tencel blends, every fabric is treated as a work of craft.';
+                ?>
             </p>
         </div>
 

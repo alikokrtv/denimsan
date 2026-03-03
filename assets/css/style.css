@@ -574,11 +574,23 @@ p {
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 1.5px;
-    margin: 0;
+    margin: 0 0 6px;
     color: #e8e8e8;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.category-desc-text {
+    font-size: 0.75rem;
+    color: #888;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Keep old classes harmless in case still referenced */
