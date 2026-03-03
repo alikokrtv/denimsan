@@ -174,7 +174,7 @@ p {
     color: #e0e0e0;
     font-weight: 400;
     letter-spacing: 0.3px;
-    white-space: nowrap;
+    overflow: hidden;
 }
 
 .site-header.scrolled .top-bar {
@@ -201,8 +201,8 @@ p {
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-shrink: 0;
     min-width: 0;
+    overflow: hidden;
 }
 
 .top-link,
@@ -874,7 +874,8 @@ p {
     }
 
     .categories-grid {
-        grid-template-columns: 1fr;
+        gap: 10px;
+        /* Keep flex carousel from the 1024px block - do NOT override to grid */
     }
 
     .story-section {
@@ -887,5 +888,35 @@ p {
 
     .story-text-slide h3 {
         font-size: 1.2rem !important;
+    }
+
+    /* iPhone 14 / small screen tight rules */
+    .container {
+        padding: 0 16px;
+    }
+
+    .category-card {
+        width: 78vw;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.6rem, 7vw, 2.4rem);
+        word-break: break-word;
+    }
+
+    .header-inner {
+        padding: 10px 16px !important;
+    }
+
+    /* Top bar: only lang switcher on very small screens */
+    .top-bar-left,
+    .top-socials,
+    .top-text {
+        display: none !important;
+    }
+
+    .top-bar-right {
+        justify-content: flex-end;
+        width: 100%;
     }
 }
