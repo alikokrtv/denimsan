@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Prevent iOS Safari auto-refresh loops when URL bar hides/shows
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
     // --- Preloader Animation ---
     const tlPreloader = gsap.timeline();

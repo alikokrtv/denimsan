@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
 
     <div class="hero-content">
         <span class="hero-subtitle fade-up">Premium Denim</span>
-        <h1 class="fade-up text-uppercase">denim<strong>san</strong></h1>
+        <h1 class="fade-up" style="letter-spacing: 5px; font-weight: 400;">DENIM<strong>SAN</strong></h1>
         <div class="fade-up" style="margin-top:40px;">
             <a href="#about" class="btn">
                 <?php echo tr('discover'); ?>
