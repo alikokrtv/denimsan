@@ -168,11 +168,13 @@ p {
 
 /* Top Bar */
 .top-bar {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px 0;
-    font-size: 0.92rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 8px 0;
+    font-size: 0.78rem;
     color: #e0e0e0;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
 .site-header.scrolled .top-bar {
@@ -180,17 +182,27 @@ p {
     /* Hide top bar on scroll for cleaner navigation */
 }
 
+.top-bar .container {
+    padding: 0 24px;
+    max-width: 100%;
+}
+
 .top-bar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 8px;
 }
 
 .top-bar-left,
 .top-bar-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
+    flex-shrink: 0;
+    min-width: 0;
 }
 
 .top-link,
