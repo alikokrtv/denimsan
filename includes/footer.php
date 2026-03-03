@@ -9,6 +9,11 @@
     </a>
 </div>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/905333651726" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="ph-fill ph-whatsapp-logo"></i>
+</a>
+
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-inner">
@@ -60,9 +65,10 @@
 
             <div class="footer-col social-col">
                 <h4>Sosyal Medya</h4>
-                <a href="#" class="social-icon"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
-                <a href="#" class="social-icon"><i class="ph ph-instagram-logo"></i> Instagram</a>
-                <a href="#" class="social-icon"><i class="ph ph-facebook-logo"></i> Facebook</a>
+                <a href="https://www.linkedin.com/company/denimsan" target="_blank" class="social-icon"><i
+                        class="ph ph-linkedin-logo"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/denimsan_denim/" target="_blank" class="social-icon"><i
+                        class="ph ph-instagram-logo"></i> Instagram</a>
             </div>
         </div>
     </div>

@@ -203,18 +203,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
                 <div style="margin-top:40px; display:flex; flex-direction:column; gap:20px;">
                     <div>
                         <strong
-                            style="color:var(--accent); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:5px;">Adres
+                            style="font-size: 0.82rem; color:var(--accent); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:5px;">Adres
                             / Address</strong>
-                        <p style="color:#fff; margin:0;">
+                        <p style="color:#fff; margin:0; font-size: 0.85rem;">
                             <?php echo nl2br(htmlspecialchars($site_config['contact_address'])); ?>
                         </p>
                     </div>
                     <div>
                         <strong
-                            style="color:var(--accent); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:5px;">E-Posta
+                            style="font-size: 0.82rem; color:var(--accent); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:5px;">E-Posta
                             / Email</strong>
                         <a href="mailto:<?php echo htmlspecialchars($site_config['contact_email']); ?>"
-                            style="color:#fff; text-decoration:none;">
+                            style="color:#fff; text-decoration:none; font-size: 0.85rem;">
                             <?php echo htmlspecialchars($site_config['contact_email']); ?>
                         </a>
                     </div>

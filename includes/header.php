@@ -46,9 +46,10 @@ require_once 'includes/functions.php';
                     <span class="top-text"><?php echo tr('working_hours'); ?></span>
                     <span class="separator">|</span>
                     <div class="top-socials">
-                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
-                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
-                        <a href="#"><i class="ph ph-youtube-logo"></i></a>
+                        <a href="https://www.linkedin.com/company/denimsan" target="_blank"><i
+                                class="ph ph-linkedin-logo"></i></a>
+                        <a href="https://www.instagram.com/denimsan_denim/" target="_blank"><i
+                                class="ph ph-instagram-logo"></i></a>
                     </div>
                     <span class="separator">|</span>
                     <!-- Language Switcher -->
