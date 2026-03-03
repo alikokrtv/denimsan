@@ -1,11 +1,9 @@
 :root {
-    --bg-dark: #1E2160;
-    --bg-gradient: linear-gradient(145deg, #0f1240 0%, #2C2F6C 40%, #1a1d52 70%, #0d1035 100%);
+    --bg-dark: #0e0e0e;
     --text-dark: #f0f0f0;
     --bg-light: #ffffff;
     --text-light: #1a1a1a;
     --accent: #d4af37;
-    /* Subtle Luxury Gold/Bronze */
     --font-main: 'Montserrat', sans-serif;
     --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -24,8 +22,7 @@ html {
 
 body {
     font-family: var(--font-main);
-    background: var(--bg-gradient);
-    background-attachment: fixed;
+    background-color: var(--bg-dark);
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;

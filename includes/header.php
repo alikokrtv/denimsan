@@ -83,7 +83,6 @@ require_once 'includes/functions.php';
 
             <a href="index.php" class="logo">
                 <span class="logo-main">denim<strong>san</strong></span>
-                <span class="logo-sub">the denimport</span>
             </a>
 
             <nav class="desktop-nav right-nav">
