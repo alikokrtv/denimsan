@@ -144,17 +144,58 @@ document.addEventListener("DOMContentLoaded", () => {
     // Smooth Scroll utility for links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            if (this.getAttribute('href') !== '#') {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop,
-                        behavior: 'smooth'
-                    });
+                // Check if we are on the homepage
+                const isHomePage = window.location.pathname.endsWith('index.php') || window.location.pathname.endsWith('/');
+
+                if (isHomePage) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // Redirect to the homepage with the hash
+                    window.location.href = 'index.php' + href;
                 }
             }
         });
     });
 
+});
+
+// Global functions for Category Modal
+function openCategoryModal(title, desc, imgSrc) {
+    const modal = document.getElementById('categoryModal');
+    if (!modal) return;
+
+    document.getElementById('modalTitle').textContent = title;
+
+    // Convert newlines to HTML br tags for better formatting or leave as text
+    document.getElementById('modalDesc').innerHTML = desc.replace(/\n/g, '<br>');
+
+    document.getElementById('modalImg').src = imgSrc;
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeCategoryModal() {
+    const modal = document.getElementById('categoryModal');
+    if (!modal) return;
+
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Close modal on click outside content
+document.addEventListener('click', function (e) {
+    const modal = document.getElementById('categoryModal');
+    if (modal && e.target === modal) {
+        closeCategoryModal();
+    }
 });

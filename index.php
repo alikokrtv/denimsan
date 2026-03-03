@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
                 $imgSrc = !empty($cat['cover_image']) ? $cat['cover_image'] : 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
                 ?>
 
-                <div class="category-card">
+                <div class="category-card" style="cursor: pointer;" onclick="openCategoryModal('<?php echo htmlspecialchars(addslashes($catTitle)); ?>', '<?php echo htmlspecialchars(addslashes($catDesc)); ?>', '<?php echo htmlspecialchars(addslashes($imgSrc)); ?>')">
                     <div class="category-img-wrap">
                         <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="<?php echo htmlspecialchars($catTitle); ?>"
                             class="category-img">
@@ -247,6 +247,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
         </div>
     </div>
 </section>
+
+<!-- ======================= CATEGORY MODAL ======================= -->
+<div id="categoryModal" class="category-modal-overlay">
+    <div class="category-modal-content">
+        <button class="category-modal-close" onclick="closeCategoryModal()"><i class="ph ph-x"></i></button>
+        <div class="modal-grid">
+            <div class="modal-img-col">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-text-col">
+                <h2 id="modalTitle" class="text-uppercase" style="color:var(--accent); margin-top:0;"></h2>
+                <div id="modalDesc" style="color:#e0e0e0; line-height:1.6; font-size: 0.95rem;"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php
 require_once 'includes/footer.php';
