@@ -122,17 +122,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Category Cards Stagger
-    gsap.from('.category-card', {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: ".categories-grid",
-            start: "top 80%",
-        }
+    // Individual Category Cards Fade up
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+        gsap.from(card, {
+            y: 30,
+            opacity: 0,
+            duration: 0.7,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            onComplete: () => {
+                gsap.set(card, { clearProps: "all" });
+            }
+        });
     });
 
     // Smooth Scroll utility for links
