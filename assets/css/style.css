@@ -538,8 +538,10 @@ p {
     color: white;
     cursor: default;
     flex-shrink: 0;
-    background: #111;
-    transition: transform 0.3s ease;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
 }
 
 .category-card:hover {
@@ -566,24 +568,30 @@ p {
 }
 
 .category-info {
-    padding: 12px 14px;
-    background: #111;
+    padding: 16px;
+    background: #000;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 90px;
 }
 
 .category-title {
-    font-size: 0.78rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 700;
     letter-spacing: 1.5px;
-    margin: 0 0 6px;
-    color: #e8e8e8;
+    margin: 0 0 8px;
+    color: #ffffff;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: uppercase;
 }
 
 .category-desc-text {
-    font-size: 0.75rem;
-    color: #888;
+    font-size: 0.72rem;
+    color: #aaaaaa;
     line-height: 1.5;
     margin: 0;
     display: -webkit-box;
@@ -591,6 +599,7 @@ p {
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    font-weight: 300;
 }
 
 /* Keep old classes harmless in case still referenced */
@@ -775,7 +784,8 @@ p {
     }
 
     .category-card {
-        width: 43vw;
+        width: 44vw;
+        height: auto;
     }
 
     /* --- Horizontal Swipe Carousel for Collections (like ISKO) --- */
@@ -899,7 +909,7 @@ p {
 
     .category-card {
         width: 44vw;
-        height: 240px;
+        height: auto;
     }
 
     .hero-content h1 {
