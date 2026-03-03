@@ -1,5 +1,6 @@
 :root {
-    --bg-dark: #2C2F6C;
+    --bg-dark: #1E2160;
+    --bg-gradient: linear-gradient(145deg, #0f1240 0%, #2C2F6C 40%, #1a1d52 70%, #0d1035 100%);
     --text-dark: #f0f0f0;
     --bg-light: #ffffff;
     --text-light: #1a1a1a;
@@ -22,8 +23,8 @@ html {
 
 body {
     font-family: var(--font-main);
-    background-color: var(--bg-dark);
-    /* Default Dark Premium Theme */
+    background: var(--bg-gradient);
+    background-attachment: fixed;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;

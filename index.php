@@ -86,8 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
                 $imgSrc = !empty($cat['cover_image']) ? $cat['cover_image'] : 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
                 ?>
 
-                <a href="<?php echo $cat['video_url'] ? htmlspecialchars($cat['video_url']) : '#'; ?>" class="category-card"
-                    <?php echo $cat['video_url'] ? 'target="_blank"' : ''; ?>>
+                <a href="javascript:void(0)" class="category-card" style="cursor:default;">
                     <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="<?php echo htmlspecialchars($catTitle); ?>"
                         class="category-img">
                     <div class="category-overlay"></div>
