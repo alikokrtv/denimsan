@@ -1,6 +1,14 @@
 ﻿</div> <!-- End smooth-content -->
 </main> <!-- End smooth-wrapper -->
 
+<!-- Sticky Floating Language Button (visible after scrolling down) -->
+<div id="lang-float">
+    <a href="?lang=<?php echo $current_lang === 'tr' ? 'en' : 'tr'; ?>">
+        <i class="ph ph-globe"></i>
+        <?php echo $current_lang === 'tr' ? 'EN' : 'TR'; ?>
+    </a>
+</div>
+
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-inner">

@@ -170,8 +170,8 @@ p {
 .top-bar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 10px 0;
-    font-size: 0.8rem;
-    color: #ccc;
+    font-size: 0.92rem;
+    color: #e0e0e0;
     font-weight: 300;
 }
 
@@ -237,10 +237,10 @@ p {
 }
 
 .site-header.scrolled {
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(20, 22, 75, 0.97);
     backdrop-filter: blur(10px);
     mix-blend-mode: normal;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-inner {
@@ -418,7 +418,7 @@ p {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background: #000;
+    background: var(--bg-dark);
 }
 
 .slide {
@@ -503,7 +503,7 @@ p {
 
 /* Collections/Categories Section */
 .collections-section {
-    background-color: #111;
+    background-color: var(--bg-dark);
 }
 
 .categories-grid {
@@ -607,7 +607,7 @@ p {
 
 /* Contact Section */
 .contact-section {
-    background-color: #111;
+    background-color: var(--bg-dark);
 }
 
 .contact-grid {
@@ -648,8 +648,8 @@ p {
 
 /* Footer */
 .site-footer {
-    background-color: #050505;
-    border-top: 1px solid #1a1a1a;
+    background-color: rgba(15, 17, 55, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: 80px 0 40px;
 }
 
@@ -689,10 +689,48 @@ p {
     color: white;
 }
 
-/* Mobile Floating Language Switcher */
+/* --- Sticky Language Button (shows while scrolling, all screen sizes) --- */
+#lang-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1500;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#lang-float.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#lang-float a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.95);
+    color: #1a1300;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    transition: transform 0.2s ease;
+}
+
+#lang-float a:hover {
+    transform: scale(1.05);
+}
+
+/* Legacy mobile floating class — hide since we use the unified #lang-float */
 .mobile-floating-lang {
-    display: none;
-    /* Hidden on desktop */
+    display: none !important;
 }
 
 /* Responsive */

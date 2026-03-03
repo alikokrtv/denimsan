@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
-    
+
     // Prevent iOS Safari auto-refresh loops when URL bar hides/shows
     ScrollTrigger.config({ ignoreMobileResize: true });
 
@@ -27,13 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- Header Scrolled State ---
+    // --- Header Scrolled State + Floating Language Toggle ---
     const header = document.querySelector('.site-header');
+    const langFloat = document.getElementById('lang-float');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
+        }
+        // Show sticky language button when scrolled past top bar area
+        if (langFloat) {
+            if (window.scrollY > 200) {
+                langFloat.classList.add('visible');
+            } else {
+                langFloat.classList.remove('visible');
+            }
         }
     });
 
